@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutal-force-PRIWI</title>
+    <script>
+        function checkPassword() {
+            const correctPassword = "00000003"; // passwort einstelung
+            const userPassword = document.getElementById("password").value;
+            if (userPassword === correctPassword) {
+                window.location.href = "success.html"; // forwarding zum nachte seite
+            } else {
+                document.getElementById("message").textContent = "Falsche password!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Herzliche willkommen bei brutal force test weseit PRIWI</h1>
+    <p>Passwort eingeben</p>
+    <input type="password" id="password" placeholder="Ihre Password">
+    <button id="button" onclick="checkPassword()">Bestetigen</button>
+    <p id="message" style="color: red;"></p>
+</body>
+</html>
